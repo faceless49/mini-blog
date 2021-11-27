@@ -3,25 +3,17 @@ import { Posts } from "../components/Posts";
 import { Comments } from "../components/Comments";
 import React, { FC, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { postsApi } from "../api/api";
-import { fetchPosts } from "../redux/reducers/posts-reducer";
+import { fetchPostsTC, removePostTC } from "../redux/reducers/posts-reducer";
 
 export const Home: FC<any> = () => {
   const dispatch = useDispatch();
 
-  const removePost = (id: number) => {
-    if (window.confirm("Ты реально хочешь это?!")) {
-      dispatch({
-        type: "REMOVE_POST",
-        payload: {
-          id,
-        },
-      });
-    }
+  const removePost = (id: string) => {
+    dispatch(removePostTC(id));
   };
 
   useEffect(() => {
-    dispatch(fetchPosts());
+    dispatch(fetchPostsTC());
   }, []);
 
   return (

@@ -5,7 +5,7 @@ import { Post } from "./Post";
 import { useAppSelector } from "../redux/store";
 
 type PropsType = {
-  onRemove: (id: number) => void;
+  onRemove: (id: string) => void;
 };
 
 export const Posts: FC<PropsType> = ({ onRemove }) => {

@@ -12,10 +12,7 @@ export const FullPost = () => {
   const { id } = useParams();
 
   const post = useAppSelector<PostType>(
-    (state) =>
-      state.posts.posts.find(
-        (obj) => Number(obj?.id) === Number(id)
-      ) as PostType
+    (state) => state.posts.posts.find((obj) => obj.id === id) as PostType
   );
 
   return (

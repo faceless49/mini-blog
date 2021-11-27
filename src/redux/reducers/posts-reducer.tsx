@@ -20,9 +20,7 @@ export function postsReducer(
     case "REMOVE_POST":
       return {
         ...state,
-        posts: state.posts.filter(
-          (obj: PostType) => obj.id !== action.payload.id
-        ),
+        posts: state.posts.filter((obj: PostType) => obj.id !== action.id),
       };
     case "SET-POSTS":
       return { posts: action.posts.map((p) => ({ ...p })) };
@@ -32,14 +30,8 @@ export function postsReducer(
 }
 
 // Action Creators
-export const removePostAC = (id: number) => {
-  return {
-    type: "REMOVE_POST",
-    payload: {
-      id,
-    },
-  } as const;
-};
+export const removePostAC = (id: string) =>
+  ({ type: "REMOVE_POST", id } as const);
 export const setPostsAC = (posts: Array<PostType>) =>
   ({ type: "SET-POSTS", posts } as const);
 export const addPostAC = (post: PostType) =>
@@ -56,11 +48,19 @@ export const addPostTC = (): ThunkType => (dispatch) => {
   });
 };
 
-export const fetchPosts = (): ThunkType => (dispatch) => {
+export const fetchPostsTC = (): ThunkType => (dispatch) => {
   postsApi.getPosts().then((res) => {
     dispatch(setPostsAC(res.data));
   });
 };
+
+export const removePostTC =
+  (id: string): ThunkType =>
+  (dispatch) => {
+    postsApi.removePost(id).then((res) => {
+      dispatch(removePostAC(id));
+    });
+  };
 
 type ActionsType =
   | ReturnType<typeof addPostAC>
