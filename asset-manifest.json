@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/mini-blog/static/js/main.a8b897b9.chunk.js",
-    "main.js.map": "/mini-blog/static/js/main.a8b897b9.chunk.js.map",
+    "main.js": "/mini-blog/static/js/main.b92c5b4c.chunk.js",
+    "main.js.map": "/mini-blog/static/js/main.b92c5b4c.chunk.js.map",
     "runtime-main.js": "/mini-blog/static/js/runtime-main.9a235708.js",
     "runtime-main.js.map": "/mini-blog/static/js/runtime-main.9a235708.js.map",
-    "static/js/2.9db0df70.chunk.js": "/mini-blog/static/js/2.9db0df70.chunk.js",
-    "static/js/2.9db0df70.chunk.js.map": "/mini-blog/static/js/2.9db0df70.chunk.js.map",
+    "static/js/2.87079505.chunk.js": "/mini-blog/static/js/2.87079505.chunk.js",
+    "static/js/2.87079505.chunk.js.map": "/mini-blog/static/js/2.87079505.chunk.js.map",
     "index.html": "/mini-blog/index.html",
-    "static/js/2.9db0df70.chunk.js.LICENSE.txt": "/mini-blog/static/js/2.9db0df70.chunk.js.LICENSE.txt"
+    "static/js/2.87079505.chunk.js.LICENSE.txt": "/mini-blog/static/js/2.87079505.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9a235708.js",
-    "static/js/2.9db0df70.chunk.js",
-    "static/js/main.a8b897b9.chunk.js"
+    "static/js/2.87079505.chunk.js",
+    "static/js/main.b92c5b4c.chunk.js"
   ]
 }
